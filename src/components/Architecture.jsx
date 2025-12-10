@@ -53,6 +53,23 @@ const Architecture = () => {
                     </p>
                 </motion.div>
 
+                {/* Architecture Diagram */}
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1 }}
+                    className="mb-20"
+                >
+                    <div className="relative w-full max-w-4xl mx-auto rounded-2xl overflow-hidden border border-neon-blue/20 bg-gradient-to-br from-gray-950 to-black">
+                        <img
+                            src="/architecture_diagram.webp"
+                            alt="Cognitive Firewall Architecture Diagram"
+                            className="w-full h-auto"
+                        />
+                    </div>
+                </motion.div>
+
                 <div className="space-y-6">
                     {layers.map((layer, index) => {
                         const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.5 })
